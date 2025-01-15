@@ -1,5 +1,3 @@
-
-
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -49,7 +47,7 @@ public class Circle {
      * Default constructor:  Creates a Blue circle of radius 100 @ (100,100)
      */
     public Circle() {
-        this(100,Color.BLACK, Color.BLUE,100,100);
+        this(100, Color.BLACK, Color.BLUE, 100, 100);
     }
 
 
@@ -63,7 +61,7 @@ public class Circle {
      * @param y the circle's center y value
      */
     public Circle(double radius, double x, double y) {
-        this(radius,Color.BLACK, Color.BLUE,x,y);
+        this(radius, Color.BLACK, Color.BLUE, x, y);
     }
 
 
@@ -79,7 +77,7 @@ public class Circle {
      * @param fillColor the colour filling the circle
      */
     public Circle(double radius, Color fillColor, double x, double y) {
-        this(radius,fillColor, fillColor,x,y);
+        this(radius, fillColor, fillColor, x, y);
     }
 
 
@@ -203,7 +201,7 @@ public class Circle {
      */
     public void setColor(Color borderColor, Color fillColor) {
         this.borderColor = borderColor;
-        this.fillColor   = fillColor;
+        this.fillColor = fillColor;
     }
 
 
@@ -234,8 +232,8 @@ public class Circle {
      * @return Distance between the centers of the two circles.
      */
     private double distance(Circle other) {
-        return Math.sqrt((this.x - other.x) * (this.x - other.x)
-                + (this.y - other.y) * (this.y - other.y));
+        return Math.sqrt((this.x - other.x) * (this.x - other.x) +
+                (this.y - other.y) * (this.y - other.y));
     }
 
 

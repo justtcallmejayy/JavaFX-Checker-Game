@@ -8,8 +8,7 @@ import javafx.scene.canvas.GraphicsContext;
  * @author Dave Slemon
  * @version v101
  */
-public class Rectangle
-{
+public class Rectangle {
     //static variable
     public static int nextRectId;
 
@@ -21,7 +20,7 @@ public class Rectangle
     private Color fillColor;
     private Color borderColor;
 
- 
+
 
 
     /**
@@ -31,7 +30,7 @@ public class Rectangle
      */
     public Rectangle() {
 
-        this(20,40);
+        this(20, 40);
     }
 
 
@@ -46,7 +45,7 @@ public class Rectangle
      */
     public Rectangle(double length, double width) {
 
-        this(length, width, Color.YELLOW, Color.RED, 50,100);
+        this(length, width, Color.YELLOW, Color.RED, 50, 100);
     }
 
 
@@ -64,11 +63,10 @@ public class Rectangle
      * @param x  the x.
      * @param y  the y.
      */
-    public Rectangle(double length, double width, Color fillColor, Color borderColor, double x, double y)
-    {
+    public Rectangle(double length, double width, Color fillColor, Color borderColor, double x, double y) {
 
         this.length = length;
-        this.width  = width;
+        this.width = width;
         this.fillColor = fillColor;
         this.borderColor = borderColor;
         topLeft_x = x;
@@ -229,15 +227,14 @@ public class Rectangle
      *
      * @param gc  the gc.
      */
-    public void draw(GraphicsContext gc)
-    {
+    public void draw(GraphicsContext gc) {
 
         gc.setFill(fillColor);
-        gc.fillRect(topLeft_x,topLeft_y, width, length);
+        gc.fillRect(topLeft_x, topLeft_y, width, length);
 
 
         gc.setStroke(borderColor);
-        gc.strokeRect(topLeft_x,topLeft_y,  width, length);
+        gc.strokeRect(topLeft_x, topLeft_y, width, length);
 
     }
 
